@@ -20,7 +20,7 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy built artifacts from the build stage to nginx
-COPY --from=build /app/dist/* /usr/share/nginx/html
+COPY --from=build /app/dist/angular-conduit /usr/share/nginx/html
 
 # Expose the default port for nginx
 EXPOSE 80
